@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>What to Eat in San Diego</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="try">
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="what-to-eat.html">What to Eat</a></li>
+          <li><a href="what-to-do.html">What to Do</a></li>
+        </ul>
+      </nav>
+  <h1>What to Eat in San Diego</h1>
+
+  <div class="tabs">
+    <button class="tab-button active" data-tab="all">All</button>
+    <button class="tab-button" data-tab="10-20">$10-20</button>
+    <button class="tab-button" data-tab="30-50">$30-50</button>
+    <button class="tab-button" data-tab="50+">$50+</button>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="tab-content active" id="tab-all">
+    <div class="restaurant"><img src="poki.jpg" alt="Poke Bowl"><h2>Poki Poki</h2></div>
+    <div class="restaurant"><img src="taco.jpg" alt="Taco Stand Building"><h2>The Taco Stand</h2></div>
+    <div class="restaurant"><img src="gelato.jpg" alt="Ice cream shop"><h2>Gelato 101</h2></div>
+    <div class="restaurant"><img src="seneca.jpg" alt="Rooftop italian restaurant"><h2>Seneca</h2></div>
+    <div class="restaurant"><img src="maurizios.jpg" alt="Italian Restaurant"><h2>Maurizio's Trattoria Italiana</h2></div>
+    <div class="restaurant"><img src="cicciottis.jpg" alt="Solana Beach restaurant"><h2>Cicciottis</h2></div>
+    <div class="restaurant"><img src="friscos.jpg" alt="Downtown San Diego restaurant"><h2>Del Frisco's</h2></div>
+    <div class="restaurant"><img src="pacific.jpg" alt="Cardiff Restaurant"><h2>Pacific Coast Grill</h2></div>
+    <div class="restaurant"><img src="rare.jpg" alt="Solana Beach steakhouse"><h2>Rare Society</h2></div>
+  </div>
+
+  <div class="tab-content" id="tab-10-20">
+    <div class="restaurant"><img src="poki.jpg" alt="Poke Bowl"><h3>Poki Poki</h3></div>
+    <div class="restaurant"><img src="taco.jpg" alt="Taco Stand Building"><h3>The Taco Stand</h3></div>
+    <div class="restaurant"><img src="gelato.jpg" alt="Ice cream shop"><h3>Gelato 101</h3></div>
+  </div>
+
+  <div class="tab-content" id="tab-30-50">
+    <div class="restaurant"><img src="seneca.jpg" alt="Rooftop italian restaurant"><h3>Seneca</h3></div>
+    <div class="restaurant"><img src="maurizios.jpg" alt="Italian Restaurant"><h3>Maurizio's Trattoria Italiana</h3></div>
+    <div class="restaurant"><img src="cicciottis.jpg" alt="Solana Beach restaurant"><h3>Cicciottis</h3></div>
+  </div>
+
+  <div class="tab-content" id="tab-50+">
+    <div class="restaurant"><img src="friscos.jpg" alt="Downtown San Diego restaurant"><h3>Del Frisco's</h3></div>
+    <div class="restaurant"><img src="pacific.jpg" alt="Cardiff Restauran"><h3>Pacific Coast Grill</h3></div>
+    <div class="restaurant"><img src="rare.jpg" alt="Solana Beach steakhouse"><h3>Rare Society</h3></div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="what_to_eat.js"></script>
+
+</body>
+</html>
