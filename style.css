@@ -1,9 +1,23 @@
 
+.skip-link {
+  position: absolute;
+  top: -40px; /* hide it offscreen */
+
+}
+
+/* When focused (keyboard navigation), show it */
+.skip-link:focus {
+  top: 0;
+}
+main {
+  background-color: #b9deed;
+}
 body {
     background-color: #f9fadf;
     background-image: url('wata.jpg');
     font-family: 'Pacifico', cursive;
     margin: 0;
+    font-size: 16px;
     padding: 0;
   }
   
@@ -21,7 +35,7 @@ body {
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
   }
   
-  /* Text over hero */
+  /* Text over the hero */
   .hero header {
     position: absolute;
     top: 50%;
@@ -115,7 +129,7 @@ main {
     grid-column: span 2;
   }
   
-  /* Circule photos */
+  /* Circle photos */
   section.significant-figures .image-row {
     display: flex;
     justify-content: center;
@@ -175,8 +189,8 @@ section::after {
     height: 100%;
     background: linear-gradient(
       120deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(225, 225, 216, 0.5) 50%,
+      rgba(255, 255, 255, 0) 0%, 
+      rgba(225, 225, 216, 0.5) 50%, 
       rgba(255, 255, 255, 0) 100%
     );
     transform: skewX(-20deg);
@@ -184,7 +198,7 @@ section::after {
     pointer-events: none;
   }
 
-  section:not(.fullscreen):hover::after {
+  section:not(.fullscreen):hover::after {  /* Chat GPT helped me here because there was a lot going on and I couldn't quite get all of them right */
     animation: slow-shine 2.5s ease-in-out forwards;
     opacity: 1;
   }
@@ -226,14 +240,14 @@ section::after {
     overflow: hidden;
   }
   
-  /* ========== BUBBLE HEADER COLOR LOOP ========== */
+  /* BUBBLE HEADER */
   section h3 {
     animation: colorLoop 5s infinite alternate;
   }
   
   @keyframes colorLoop {
     0% { color: #02082d; } 
-    15% { color: #1d2045; }  
+    15% { color: #1d2045; }   /* These are the four colors that gradually change */
     50% { color: #1a1f24; } 
     100% { color: #3d4050; } 
   }
@@ -249,7 +263,7 @@ section::after {
     font-size: 2.5em;
     margin-bottom: 1em;
   }
-  
+  /* For the tabs pricing */
   .tabs {
     display: flex;
     justify-content: center;
@@ -312,7 +326,7 @@ section::after {
   
   .restaurant h2 {
     margin: 0.5em 0 0;
-    font-size: 1.2em;
+    font-size: 16px;
     color: #b25d2d;
   }
   
@@ -344,7 +358,7 @@ section::after {
   }
   
   .card {
-    perspective: 1000px;
+    perspective: 1000px; /* Chat GPT helped me with this card */
     height: 30vw;
   }
   
@@ -357,7 +371,7 @@ section::after {
   }
   
   .card.flipped .card-inner {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg); /* for the flip */
   }
   
   .card-front, .card-back {
@@ -419,3 +433,34 @@ section::after {
   .card-back .btn:hover {
     background-color: #240e00;
   }
+
+  footer {
+    background-color: #e8decf;
+    text-align: center;
+    padding: 2em;
+    margin-top: 4em;
+  }
+  
+  footer .social-icons {
+    margin: 1em 0;
+  }
+  
+  footer .social-icons a img {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5em;
+    vertical-align: middle;
+    filter: grayscale(70%);
+    transition: filter 0.3s;
+  }
+  
+  footer .social-icons a img:hover {
+    filter: grayscale(0%);
+  }
+  
+  footer p {
+    margin: 0.5em 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
